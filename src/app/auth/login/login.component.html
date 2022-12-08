@@ -1,0 +1,43 @@
+<div>
+<form [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
+    <h3>Login</h3>
+  
+    <label for="email">Email</label>
+    <input
+      [ngClass]="{'input-error': showErrorInControl('email')}"
+      formControlName="email"
+      type="text"
+      placeholder="max.musterman@gmail.com"
+      id="email"
+    />
+  
+    <ng-container *ngIf="showErrorInControl('email')">
+        <p *ngIf="loginFormGroup.controls['email'].errors?.['required']" class="alert-error">
+            Email is required!
+        </p>
+    </ng-container> 
+  
+    <label for="password">Password</label>
+    <input
+      formControlName="password"
+      type="password"
+      placeholder="******"
+      id="password"
+      [ngClass]="{'input-error': showErrorInControl('password')}"
+    />
+
+    <ng-container *ngIf="showErrorInControl('password')">
+        <p *ngIf="loginFormGroup.controls['password'].errors?.['required']" class="alert-error">
+            Password is required!
+        </p>
+    </ng-container>
+  
+    <button [disabled]="loginFormGroup.invalid" class="primary-btn">
+      Login
+    </button>
+  
+    <div class="reg-link">
+      <a routerLink="/register">You don't have an acount yet? Sign Up now!</a>
+    </div>
+  </form>
+</div>

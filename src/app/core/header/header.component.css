@@ -1,0 +1,55 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #000;
+  background-size: cover;
+  font-family: 'Space Grotesk';
+}
+div.header {
+  /* position: fixed; */
+  width: 100%;
+  text-align: center;
+  color: rgb(44, 76, 206);
+  transition: .4s;
+  font-family: 'Space Grotesk';
+
+}
+div.header:hover {
+  background: rgba(29, 38, 176, 0.8);
+  color: #000;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: .5rem;
+  font-family: 'Space Grotesk';
+
+}
+
+nav {
+    align-content: center;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  color: inherit;
+  padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+}
+h2 { 
+  font-family: 'Space Grotesk';
+  font-size: 8vmin;
+  text-align: center;
+  margin: 2rem 3rem 0;
+  mix-blend-mode: overlay;
+  color: #fff;
+  font-weight: 100;
+}
